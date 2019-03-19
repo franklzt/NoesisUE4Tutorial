@@ -13,7 +13,7 @@ Just do it first, came back to ask why.
 
 
 3.Install Microsoft Visual Studio 2017 include blend from https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes
-
+<image src = "VSBlend.png">
 
 ## Let's get started:
 
@@ -116,10 +116,12 @@ namespace DemoUI
 
 
 6.Open blueprint MainWindowView under class setting to setup Noesis View xaml to MainWindow.xaml,click Enable PPAA.see picture.
-
-
+<image src = "MainWindowView_StartFunction.png">
+<image src = "MainWindowView_SettingFunction.png">
+<image src = "MainWindowView_ExitFunction.png">
+	
 7.Create one new blueprint to project,parent class is Actor named SpawnNoesis,open it and add blueprint node as picture.
-
+<image src = "MainWindowView_SpawnNoesis.png">
 
 8.Drag the SpawnNoesis to map and then you can see the result.
 
