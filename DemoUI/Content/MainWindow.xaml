@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="DemoUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoUI"
+        mc:Ignorable="d"
+         Height="1080" Width="1920">
+
+    <UserControl.Resources>
+        <local:ElementToVisibility x:Key="ElementToVisibility"/>
+    </UserControl.Resources>
+    
+    <Grid Background="#FF7350D1">
+        <Button Content="ButtonA" HorizontalAlignment="Left" Margin="350,100,0,0" VerticalAlignment="Top" Width="200" Height="100" Command="{Binding Start}"/>
+        <Button Content="ButtonB" HorizontalAlignment="Left" Margin="350,300,0,0" VerticalAlignment="Top" Width="200" Height="100" Command="{Binding Setting}"/>
+        <Button Content="ButtonC" HorizontalAlignment="Left" Margin="350,500,0,0" VerticalAlignment="Top" Width="200" Height="100" Command="{Binding Exit}"/>
+        <Label Content="{Binding TitleA, Mode=TwoWay}" HorizontalAlignment="Left" Margin="600,100,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="{Binding TitleB,Mode=TwoWay}" HorizontalAlignment="Left" Margin="600,300,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="{Binding TitleC,Mode=TwoWay}" Visibility="{Binding ElementToVisibility, Converter={StaticResource ElementToVisibility}}"  HorizontalAlignment="Left" Margin="600,500,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+    </Grid>
+</UserControl>
