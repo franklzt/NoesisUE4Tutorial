@@ -245,3 +245,7 @@ IMPLEMENT_PRIMARY_GAME_MODULE(DemoUIGameModule, DemoUI, "DemoUI" );
 
 
 13. Compile the code project and return to Unreal Engine editor to run the demo.
+<image src = "FinishA.png">
+<image src = "FinishB.png">
+
+## Now you know how to bring Noesis power to Unreal Engine 4
