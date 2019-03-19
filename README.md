@@ -2,20 +2,35 @@
 Getting Start NoesisGUI for Unreal Engine
 
 Just do it first, came back to ask why.
-before you start:
+
+
+##Before you start:
 
 1.Install Unreal Engine 4.21 from https://www.unrealengine.com/en-US/what-is-unreal-engine-4
+
+
 2.DownLoad NoesisGUI 2.2.0 Unreal 4 Plugin from https://noesisengine.com/developers/downloads.php 
+
+
 3.Install Microsoft Visual Studio 2017 include blend from https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes
 
-Let's get started:
 
-Blend Project section:
+## Let's get started:
+
+
+## Blend Project section:
 1.Create one WPF Project using Visual Studio 2017 and then Close the Visual Studio 2017
+
+
 2.Find and  modify the MainWindow.xaml file  from  Window To UserControl.
+
+
 3.Modify MainWindow.xaml.cs, also Window To UserControl.
+
+
 4.Add new file name it ElementToVisibility.cs and add code below:
 
+```
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Data;
@@ -48,9 +63,14 @@ namespace DemoUI
         }
     }
 }
+```
+
 
 5.Add one three button and three label to MainWindow.xaml. the finish code is like this.
 
+
+
+```
 <UserControl x:Class="DemoUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -74,30 +94,70 @@ namespace DemoUI
     </Grid>
 </UserControl>
 
-Blueprint section:
+```
+
+
+## Blueprint section:
+
+
 1.Create Unreal Engine 4 Blank Project named DemoUI ( though this name is up to you,mine is this one, recommand using the name for easy to follow up)
+
+
 2.Copy the downloaded NoesisGUI Plugin to Project Location.
+
+
 3.Right Click the mouse with Unreal Project File to show content menu, choose Genereate the Visual Studio Project files command to intall the plugins.
+
+
 4.Copy the whole WPF project to the folder under Unreal Project Content folder.
+
+
 5.Create one blueprint, the parent class is NoesisView name it MainWindowView
+
+
 6.Open blueprint MainWindowView under class setting to setup Noesis View xaml to MainWindow.xaml,click Enable PPAA.see picture.
+
+
 7.Create one new blueprint to project,parent class is Actor named SpawnNoesis,open it and add blueprint node as picture.
+
+
 8.Drag the SpawnNoesis to map and then you can see the result.
 
-Coding section:
+## Coding section:
+
 
 1.Open Unreal Project created from step 1.
 
+
 2.Create one c++ file from menu to generate the build files.
 
-3.Add " PrivateDependencyModuleNames.AddRange(new string[] { "Noesis", "NoesisRuntime" }); " to DemoUI.build.cs.
 
-4.Add " #include "NoesisRuntime.h" " to DemoUI.h
+
+3.Add code below to DemoUI.build.cs
+
+
+
+```
+ PrivateDependencyModuleNames.AddRange(new string[] { "Noesis", "NoesisRuntime" }); 
+```
+
+
+
+4.Add code to DemoUI.h
+
+
+```
+#include "NoesisRuntime.h
+```
+
 
 5.Add new file MainWindow.h to project.
 
+
 6.Add the below code to MainWindow.h, 
 
+
+```
 #pragma once
 #include"DemoUI.h"
 namespace DemoUI
@@ -113,9 +173,15 @@ private:
 };
 }
 
+```
+
+
 10.Create new file named ElementToVisibility.h to project.
+
+
 11.Add below code to ElementToVisibility.h :
 
+```
 #pragma once
 #include "DemoUI.h"
 
@@ -146,8 +212,12 @@ namespace DemoUI
 	};
 }
 
+```
+
 12. replace below code to Demo.cpp
 
+
+```
 #include "DemoUI.h"
 #include "Modules/ModuleManager.h"
 #include "MainWindow.h"
@@ -169,5 +239,7 @@ class DemoUIGameModule : public FDefaultGameModuleImpl
 };
 IMPLEMENT_PRIMARY_GAME_MODULE(DemoUIGameModule, DemoUI, "DemoUI" );
 
-13. Compile the code project and return to Unreal Engine editor to run the demo.
+```
 
+
+13. Compile the code project and return to Unreal Engine editor to run the demo.
