@@ -371,10 +371,10 @@ private:
 ```
 
 
-10.Create new file named ElementToVisibility.h to project.
+7.Create new file named ElementToVisibility.h to project.
 
 
-11.Add below code to ElementToVisibility.h :
+8.Add below code to ElementToVisibility.h :
 
 ```
 #pragma once
@@ -409,7 +409,7 @@ namespace DemoUI
 
 ```
 
-12. replace below code to Demo.cpp
+9. replace below code to Demo.cpp
 
 
 ```
@@ -437,7 +437,7 @@ IMPLEMENT_PRIMARY_GAME_MODULE(DemoUIGameModule, DemoUI, "DemoUI" );
 ```
 
 
-13. Compile the code project and return to Unreal Engine editor to run the demo.
+10. Compile the code project and return to Unreal Engine editor to run the demo.
 <image src = "FinishA.png">
 <image src = "FinishB.png">
 
