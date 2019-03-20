@@ -316,20 +316,18 @@ When finish, it will look like picture below:
 7.Create one new blueprint to project,parent class is Actor named SpawnNoesis,open it and add blueprint node as picture.
 <image src = "MainWindowView_SpawnNoesis.png">
 
-8.Drag the SpawnNoesis to map and then you can see the result.
+8.Drag the SpawnNoesis blueprint to map.
 
 ## Coding section:
 
 
-1.Open Unreal Project created from step 1.
+1.Open Unreal Project if it has not been opened.
 
 
 2.Create one c++ file from menu to generate the build files.
 
 
-
 3.Add code below to DemoUI.build.cs
-
 
 
 ```
