@@ -126,7 +126,7 @@ under Inspctor >> Noesis View, choose MainWindow.xaml,click Enable PPAA.see pict
 <image src = "Pictures/MessageCount.png">
 
 * Create one varible name ElementToVisibility, type Boolean show as below picture
-<image src = "Pictures/Pictures/ElementToVisibility.png">
+<image src = "Pictures/ElementToVisibility.png">
 
 * Create one function name ClickToShowMessage,copy the code below:
 
