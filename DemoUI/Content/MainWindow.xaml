@@ -10,14 +10,11 @@
     <UserControl.Resources>
         <local:ElementToVisibility x:Key="ElementToVisibility"/>
     </UserControl.Resources>
-    
-    <Grid Background="#FF7350D1">
-        <Button Content="ButtonA" HorizontalAlignment="Left" Margin="350,100,0,0" VerticalAlignment="Top" Width="200" Height="100" Command="{Binding Start}"/>
-        <Button Content="ButtonB" HorizontalAlignment="Left" Margin="350,300,0,0" VerticalAlignment="Top" Width="200" Height="100" Command="{Binding Setting}"/>
-        <Button Content="ButtonC" HorizontalAlignment="Left" Margin="350,500,0,0" VerticalAlignment="Top" Width="200" Height="100" Command="{Binding Exit}"/>
-        <Label Content="{Binding TitleA, Mode=TwoWay}" HorizontalAlignment="Left" Margin="600,100,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="{Binding TitleB,Mode=TwoWay}" HorizontalAlignment="Left" Margin="600,300,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="{Binding TitleC,Mode=TwoWay}" Visibility="{Binding ElementToVisibility, Converter={StaticResource ElementToVisibility}}"  HorizontalAlignment="Left" Margin="600,500,0,0" VerticalAlignment="Top" FontSize="20"/>
 
+    <Grid Background="#FF7350D1">
+        <Button Content="ClickToShowMessage" HorizontalAlignment="Left" Margin="350,100,0,0" VerticalAlignment="Top" Width="200" Height="100" Command="{Binding ClickToShowMessage}"/>
+        <Button Content="ToggleVisibility" HorizontalAlignment="Left" Margin="350,300,0,0" VerticalAlignment="Top" Width="200" Height="100" Command="{Binding ToggleVisibility}"/>
+        <Label Content="{Binding Message, Mode=TwoWay}" HorizontalAlignment="Left" Margin="600,100,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Toggle Visibility" Visibility="{Binding ElementToVisibility, Converter={StaticResource ElementToVisibility}}"  HorizontalAlignment="Left" Margin="600,300,0,0" VerticalAlignment="Top" FontSize="20"/>
     </Grid>
 </UserControl>
