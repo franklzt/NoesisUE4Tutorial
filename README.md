@@ -112,7 +112,7 @@ There is two file under Blueprint folder,these two files are the blueprint funct
 4.Copy the whole WPF project to the folder under Unreal Project Content folder.
 
 
-5.Create one blueprint, the parent class is NoesisView name it MainWindowView
+5. Right Click on the content browser, choose NoesisView to create one blueprint,name it MainWindowView
 
 <image src = "CreateNoesisView.png">
 
