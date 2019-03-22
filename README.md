@@ -114,6 +114,7 @@ There is two file under Blueprint folder,these two files are the blueprint funct
 
 5.Create one blueprint, the parent class is NoesisView name it MainWindowView
 
+<image src = "CreateNoesisView.png">
 
 6.Open blueprint MainWindowView under class setting,
 under Inspctor >> Noesis View, choose MainWindow.xaml,click Enable PPAA.see picture below:
