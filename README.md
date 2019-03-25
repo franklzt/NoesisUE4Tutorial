@@ -3,6 +3,9 @@ Getting Start NoesisGUI for Unreal Engine
 
 Just do it first, came back to ask why.
 
+There is one video tutorial based on this text tutorial, here is the link:
+
+link：https://www.bilibili.com/video/av47290316
 
 ## Before you start:
 
